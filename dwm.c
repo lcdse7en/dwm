@@ -1639,8 +1639,8 @@ run(void)
 
 void
 runAutostart(void) {
-	/*system("killall -q dwmblocks; dwmblocks &"); */
-	/* system("cd ~/scripts; ./autostart.sh &"); */
+	system("killall -q dwmblocks; dwmblocks &");
+	system("cd ~/scripts; ./dwmblocks-start.sh &");
 }
 
 void
