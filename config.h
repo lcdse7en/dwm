@@ -199,13 +199,13 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	// { MODKEY,			XK_r,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
   
+  { MODKEY,                       XK_r,           spawn,          SHCMD("rofi -show drun") },
   { MODKEY,			                  XK_g,		        spawn,		      {.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
-  { MODKEY,			                  XK_F9,		      spawn,		      {.v = slockcmd } },
   { MODKEY,			                  XK_w,		        spawn,		      {.v = (const char*[]){ BROWSER, NULL } } },
   { MODKEY,			                  XK_n,           spawn,		      SHCMD("flameshot gui -p ~/Pictures/screenshots") },
 	{ MODKEY|ShiftMask,			        XK_n,           spawn,		      SHCMD("flameshot full -p ~/Pictures/screenshots") },
-	{ MODKEY|ShiftMask,			        XK_w,           spawn,		      SHCMD("feh --bg-fill --randomize ~/Pictures/wallpapers/* &") },
-  { MODKEY,                       XK_r,           spawn,          SHCMD("rofi -show drun") },
+	{ MODKEY,			                  XK_F9,          spawn,		      SHCMD("feh --bg-fill --randomize ~/Pictures/wallpapers/* &") },
+  { MODKEY,			                  XK_F10,		      spawn,		      {.v = slockcmd } },
 
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
