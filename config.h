@@ -47,6 +47,8 @@ static Sp scratchpads[] = {
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
+static const char *slockcmd[] = { "slock", NULL };
+
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
@@ -198,7 +200,7 @@ static Key keys[] = {
 	// { MODKEY,			XK_r,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
   
   { MODKEY,			                  XK_g,		        spawn,		      {.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
-  { MODKEY,			                  XK_F9,		      spawn,		      {.v = (const char*[]){ TERMINAL, "-e", "b", NULL } } },
+  { MODKEY,			                  XK_F9,		      spawn,		      {.v = slockcmd } },
   { MODKEY,			                  XK_w,		        spawn,		      {.v = (const char*[]){ BROWSER, NULL } } },
   { MODKEY,			                  XK_n,           spawn,		      SHCMD("flameshot gui -p ~/Pictures/screenshots") },
 	{ MODKEY|ShiftMask,			        XK_n,           spawn,		      SHCMD("flameshot full -p ~/Pictures/screenshots") },
