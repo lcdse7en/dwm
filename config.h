@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Constants */
-#define TERMINAL "alacritty"
+#define TERMINAL "st"
 #define TERMCLASS "St"
 #define BROWSER "google-chrome-stable"
 
@@ -204,7 +204,7 @@ static Key keys[] = {
   { MODKEY,			                  XK_w,		        spawn,		      {.v = (const char*[]){ BROWSER, NULL } } },
   { MODKEY,			                  XK_n,           spawn,		      SHCMD("flameshot gui -p ~/Pictures/screenshots") },
 	{ MODKEY|ShiftMask,			        XK_n,           spawn,		      SHCMD("flameshot full -p ~/Pictures/screenshots") },
-	{ MODKEY,			                  XK_F9,          spawn,		      SHCMD("feh --bg-fill --randomize ~/Pictures/wallpapers/* &") },
+	{ MODKEY,			                  XK_F9,          spawn,		      SHCMD("feh --bg-fill --randomize ~/Pictures/wallpapers/use/1920*1080/* &") },
   { MODKEY,			                  XK_F10,		      spawn,		      {.v = slockcmd } },
 
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
