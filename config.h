@@ -108,6 +108,9 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *termcmd[]  = { TERMINAL, NULL };
+static const char *voldown[]  = { "/home/se7en/scripts/voldown.sh", NULL };
+static const char *volup[]  = { "/home/se7en/scripts/volup.sh", NULL };
+static const char *voltoggle[]  = { "/home/se7en/scripts/voltoggle.sh", NULL };
 
 /*
  * Xresources preferences to load at startup
@@ -253,9 +256,9 @@ static Key keys[] = {
 /*	{ MODKEY,			XK_Insert,	spawn,		SHCMD("xdotool type $(grep -v '^#' ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },*/
 
 /*	{ MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") },*/
-	{ MODKEY,			XK_F2,		spawn,		{.v = (const char*[]){ "tutorialvids", NULL } } },
-	{ MODKEY,			XK_F3,		spawn,		{.v = (const char*[]){ "displayselect", NULL } } },
-	{ MODKEY,			XK_F4,		spawn,		SHCMD(TERMINAL " -e pulsemixer; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			XK_F2,		spawn,		{.v = voldown } } ,
+	{ MODKEY,			XK_F3,		spawn,		{.v = volup } },
+	{ MODKEY,			XK_F4,		spawn,		{.v = voltoggle } },
 	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
 	{ MODKEY,			XK_F6,		spawn,		{.v = (const char*[]){ "torwrap", NULL } } },
 	{ MODKEY,			XK_F7,		spawn,		{.v = (const char*[]){ "td-toggle", NULL } } },
