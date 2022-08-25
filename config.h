@@ -199,7 +199,7 @@ static Key keys[] = {
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	// { MODKEY,			XK_r,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
   
-  { MODKEY,                       XK_r,           spawn,          SHCMD("rofi -show drun") },
+  { MODKEY,                       XK_r,           spawn,          SHCMD("rofi -theme use -font 'JetbrainsMono 20' -show drun -show-icons") },
   { MODKEY,			                  XK_g,		        spawn,		      {.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
   { MODKEY,			                  XK_w,		        spawn,		      {.v = (const char*[]){ BROWSER, NULL } } },
   { MODKEY,			                  XK_n,           spawn,		      SHCMD("flameshot gui -p ~/Pictures/screenshots") },
