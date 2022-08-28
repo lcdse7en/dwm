@@ -111,6 +111,7 @@ static const char *termcmd[]  = { TERMINAL, NULL };
 static const char *voldown[]  = { "/home/se7en/scripts/voldown.sh", NULL };
 static const char *volup[]  = { "/home/se7en/scripts/volup.sh", NULL };
 static const char *voltoggle[]  = { "/home/se7en/scripts/voltoggle.sh", NULL };
+static const char *tmux[]  = { "/home/se7en/scripts/bootstrap.sh", NULL };
 
 /*
  * Xresources preferences to load at startup
@@ -259,6 +260,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_F2,		spawn,		{.v = voldown } } ,
 	{ MODKEY,			XK_F3,		spawn,		{.v = volup } },
 	{ MODKEY,			XK_F4,		spawn,		{.v = voltoggle } },
+	{ MODKEY,			XK_F5,		spawn,		{.v = tmux } },
 	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
 	{ MODKEY,			XK_F6,		spawn,		{.v = (const char*[]){ "torwrap", NULL } } },
 	{ MODKEY,			XK_F7,		spawn,		{.v = (const char*[]){ "td-toggle", NULL } } },
