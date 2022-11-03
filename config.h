@@ -223,9 +223,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_semicolon,	shifttag,	{ .i = 1 } },
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
-	{ MODKEY|ShiftMask,		XK_Return,	togglesmartgaps,	{0} },
+	/* { MODKEY|ShiftMask,		XK_Return,	togglesmartgaps,	{0} }, */
 	{ MODKEY,			XK_space,	spawn,		{.v = termcmd } },
-/*	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },*/
+  { MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
 
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
