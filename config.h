@@ -108,9 +108,6 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *termcmd[]  = { TERMINAL, NULL };
-static const char *voldown[]  = { "/home/se7en/scripts/voldown.sh", NULL };
-static const char *volup[]  = { "/home/se7en/scripts/volup.sh", NULL };
-static const char *voltoggle[]  = { "/home/se7en/scripts/voltoggle.sh", NULL };
 static const char *tmux[]  = { "/home/se7en/scripts/bootstrap.sh", NULL };
 
 /*
@@ -159,9 +156,7 @@ static Key keys[] = {
 	TAGKEYS(			XK_9,		8)
 	{ MODKEY,			XK_0,		view,		{.ui = ~0 } },
 	{ MODKEY|ShiftMask,		XK_0,		tag,		{.ui = ~0 } },
-	{ MODKEY,			XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_minus,	spawn,		SHCMD("pamixer --allow-boost -d 15; kill -44 $(pidof dwmblocks)") },
-	{ MODKEY,			XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY|ShiftMask,		XK_equal,	spawn,		SHCMD("pamixer --allow-boost -i 15; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_BackSpace,	spawn,		{.v = (const char*[]){ "sysact", NULL } } },
 	{ MODKEY|ShiftMask,		XK_BackSpace,	spawn,		{.v = (const char*[]){ "sysact", NULL } } },
@@ -241,7 +236,6 @@ static Key keys[] = {
 /*	{ MODKEY,			XK_v,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "nvim", "-c", NULL, NULL } } },*/
 	// { MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat ; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		{.v = (const char*[]){ TERMINAL, "-e", "ncmpcpp", NULL } } },
-	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_comma,	spawn,		{.v = (const char*[]){ "mpc", "prev", NULL } } },
 	{ MODKEY|ShiftMask,		XK_comma,	spawn,		{.v = (const char*[]){ "mpc", "seek", "0%", NULL } } },
 	{ MODKEY,			XK_period,	spawn,		{.v = (const char*[]){ "mpc", "next", NULL } } },
@@ -259,9 +253,9 @@ static Key keys[] = {
 /*	{ MODKEY,			XK_Insert,	spawn,		SHCMD("xdotool type $(grep -v '^#' ~/.local/share/larbs/snippets | dmenu -i -l 50 | cut -d' ' -f1)") },*/
 
 /*	{ MODKEY,			XK_F1,		spawn,		SHCMD("groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -") },*/
-	{ MODKEY,			XK_F2,		spawn,		{.v = voldown } } ,
-	{ MODKEY,			XK_F3,		spawn,		{.v = volup } },
-	{ MODKEY,			XK_F4,		spawn,		{.v = voltoggle } },
+	{ MODKEY,			XK_F2,	  spawn,		SHCMD("pamixer --allow-boost -d 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,			XK_F3,	  spawn,		SHCMD("pamixer --allow-boost -i 5; kill -44 $(pidof dwmblocks)") },
+	{ MODKEY,		  XK_F4,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
 	{ MODKEY,			XK_F5,		spawn,		{.v = tmux } },
 	/* { MODKEY,			XK_F5,		xrdb,		{.v = NULL } }, */
 	{ MODKEY,			XK_F6,		spawn,		{.v = (const char*[]){ "torwrap", NULL } } },
@@ -345,7 +339,7 @@ static Button buttons[] = {
 	{ ClkStatusText,        0,              Button5,        sigdwmblocks,   {.i = 5} },
 	{ ClkStatusText,        ShiftMask,      Button1,        sigdwmblocks,   {.i = 6} },
 #endif
-	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/.local/src/dwmblocks/config.h") },
+	{ ClkStatusText,        ShiftMask,      Button3,        spawn,          SHCMD(TERMINAL " -e nvim ~/github_upload/dwmblocks/config.h") },
 	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
 	{ ClkClientWin,         MODKEY,         Button2,        defaultgaps,	{0} },
 	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
