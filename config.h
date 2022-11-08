@@ -208,6 +208,7 @@ static Key keys[] = {
   { MODKEY,			                  XK_w,		        spawn,		      {.v = (const char*[]){ BROWSER, NULL } } },
   { MODKEY|ShiftMask,			        XK_w,		        spawn,		      {.v = (const char*[]){ BROWSER, "https://github.com/lcdse7en", NULL } } },
   { MODKEY|ShiftMask,			        XK_h,		        spawn,		      {.v = (const char*[]){ BROWSER, "http://kkhanju.top/", NULL } } },
+  { MODKEY,			                  XK_s,		        spawn,		      {.v = (const char*[]){ BROWSER, "192.168.5.8:8000", NULL } } },
   { MODKEY,			                  XK_n,           spawn,		      SHCMD("flameshot gui -p ~/Pictures/screenshots") },
 	{ MODKEY|ShiftMask,			        XK_n,           spawn,		      SHCMD("flameshot full -p ~/Pictures/screenshots") },
 	{ MODKEY,			                  XK_F9,          spawn,		      SHCMD("feh --bg-fill --randomize ~/Pictures/wallpapers/use/1920*1080/* &") },
