@@ -47,7 +47,7 @@ static Sp scratchpads[] = {
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
-static const char *slockcmd[] = { "slock", NULL };
+// static const char *slockcmd[] = { "slock", NULL };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -207,7 +207,8 @@ static Key keys[] = {
   { MODKEY,			                  XK_n,           spawn,		      SHCMD("flameshot gui -p ~/Pictures/screenshots") },
 	{ MODKEY|ShiftMask,			        XK_n,           spawn,		      SHCMD("flameshot full -p ~/Pictures/screenshots") },
 	{ MODKEY,			                  XK_F9,          spawn,		      SHCMD("feh --bg-fill --randomize ~/Pictures/wallpapers/use/1920*1080/* &") },
-  { MODKEY,			                  XK_F10,		      spawn,		      {.v = slockcmd } },
+  // { MODKEY,			                  XK_F10,		      spawn,		      {.v = slockcmd } },
+  { MODKEY,			                  XK_F10,		      spawn,		      SHCMD("~/.local/bin/slock") },
 
 	{ MODKEY|ShiftMask,		XK_d,		spawn,		{.v = (const char*[]){ "passmenu", NULL } } },
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
