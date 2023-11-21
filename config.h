@@ -197,13 +197,14 @@ static Key keys[] = {
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	// { MODKEY,			XK_r,		spawn,          {.v = (const char*[]){ "dmenu_run", NULL } } },
-  
+
   { MODKEY,                       XK_r,           spawn,          SHCMD("rofi -theme use -font 'JetbrainsMono 20' -show drun -show-icons") },
-  { MODKEY,			                  XK_g,		        spawn,		      {.v = (const char*[]){ TERMINAL, "-e", "lfub", NULL } } },
+  { MODKEY,			                  XK_g,		        spawn,		      {.v = (const char*[]){ TERMINAL, "-e", "lf", NULL } } },
+  { MODKEY|ShiftMask,			        XK_k,		        spawn,		      {.v = (const char*[]){ TERMINAL, "-e", "kdenlive", NULL } } },
   { MODKEY,			                  XK_w,		        spawn,		      {.v = (const char*[]){ BROWSER, NULL } } },
   { MODKEY|ShiftMask,			        XK_w,		        spawn,		      {.v = (const char*[]){ BROWSER, "https://github.com/lcdse7en", NULL } } },
-  { MODKEY|ShiftMask,			        XK_h,		        spawn,		      {.v = (const char*[]){ BROWSER, "http://kkhanju.top/", NULL } } },
-  { MODKEY,			                  XK_s,		        spawn,		      {.v = (const char*[]){ BROWSER, "192.168.5.8:8000", NULL } } },
+  { MODKEY|ShiftMask,			        XK_h,		        spawn,		      {.v = (const char*[]){ BROWSER, "https://www.ijujitv.cc/show/1-----------2023.html", NULL } } },
+  { MODKEY,			                  XK_s,		        spawn,		      {.v = (const char*[]){ BROWSER, "192.168.1.4:8000", NULL } } },
   { MODKEY,			                  XK_n,           spawn,		      SHCMD("flameshot gui -p ~/Pictures/screenshots") },
 	{ MODKEY|ShiftMask,			        XK_n,           spawn,		      SHCMD("flameshot full -p ~/Pictures/screenshots") },
 	{ MODKEY,			                  XK_F9,          spawn,		      SHCMD("feh --bg-fill --randomize ~/Pictures/wallpapers/use/1920*1080/* &") },
